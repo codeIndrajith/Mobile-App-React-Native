@@ -1,0 +1,95 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+@theme {
+  /* --- Colors: Minimalist Professional Palette --- */
+  --color-background: #fff9e3; /* Richer deep black */
+  --color-foreground: #081126;
+
+  /* Surfaces (Cards, Modals, Sheets) */
+  --color-surface: #121212; /* Elevation 1 */
+  --color-surface-variant: #1e1e1e; /* Elevation 2 / Hover */
+
+  /* Semantic Text */
+  --color-text-primary: #f5f5f5; /* High emphasis */
+  --color-text-secondary: #a1a1aa; /* Medium emphasis (Zinc-400) */
+  --color-text-muted: #71717a; /* Low emphasis (Zinc-500) */
+
+  /* Brand & Actions */
+  --color-accent: #3b82f6; /* Clean Blue */
+  --color-success: #22c55e;
+  --color-destructive: #ef4444;
+
+  /* Borders */
+  --color-border: #27272a; /* Subtle (Zinc-800) */
+
+  /* --- Spacing & Radius: Real World Standards --- */
+  --spacing-app-pad: 16px; /* Standard screen gutter */
+  --spacing-section: 24px; /* Vertical section spacing */
+
+  --radius-card: 20px; /* Modern smooth corners */
+  --radius-button: 14px;
+  --radius-input: 12px;
+}
+
+@layer components {
+  /* Layout Wrappers */
+  .screen-container {
+    @apply flex-1 bg-background px-app-pad;
+  }
+
+  .card {
+    @apply rounded-card bg-surface border border-border p-4;
+  }
+
+  /* Optimized Navigation Components */
+  .tabs-icon {
+    @apply size-11 items-center justify-center;
+  }
+
+  .tabs-pill {
+    @apply h-12 px-5 items-center justify-center rounded-full bg-transparent transition-all;
+  }
+
+  .tabs-active {
+    @apply bg-surface-variant; /* Real apps use subtle fills for active states */
+  }
+
+  /* Form Elements */
+  .input-group {
+    @apply gap-2 mb-section;
+  }
+
+  .input-label {
+    @apply text-text-secondary text-sm font-medium ml-1;
+  }
+
+  .input-base {
+    @apply h-14 w-full rounded-input border border-border bg-surface px-4 text-text-primary focus:border-accent;
+  }
+
+  /* Action Buttons */
+  .btn-main {
+    @apply h-14 w-full flex-row items-center justify-center rounded-button bg-foreground active:opacity-85;
+  }
+
+  .btn-main-text {
+    @apply text-background font-bold text-base tracking-tight;
+  }
+
+  .btn-outline {
+    @apply h-14 w-full flex-row items-center justify-center rounded-button border border-border bg-transparent active:bg-surface;
+  }
+
+  /* Typography helpers */
+  .text-h1 {
+    @apply text-2xl font-bold tracking-tight text-text-primary;
+  }
+
+  .text-body {
+    @apply text-base text-text-secondary leading-6;
+  }
+}
