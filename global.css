@@ -41,8 +41,40 @@
     @apply flex-1 bg-background px-app-pad;
   }
 
+  .home-header {
+    @apply px-app-pad;
+  }
+
+  .home-balance-card {
+    @apply rounded-tl-2xl rounded-br-2xl bg-surface border border-border p-4 min-h-[160px];
+  }
+
+  .home-balance-row {
+    @apply flex flex-col items-start justify-between;
+  }
+
+  .home-balance-text {
+    @apply text-2xl font-bold text-white;
+  }
+
+  .list-heading {
+    @apply flex flex-row items-center justify-between;
+  }
+
+  .list-heading-title {
+    @apply text-2xl font-bold;
+  }
+
+  .list-heading-subtitle {
+    @apply text-gray-500 text-sm;
+  }
+
+  .list-heading-button {
+    @apply text-black text-center border rounded-full p-2;
+  }
+
   .card {
-    @apply rounded-card bg-surface border border-border p-4;
+    @apply rounded-card bg-white border border-border p-4;
   }
 
   /* Optimized Navigation Components */
