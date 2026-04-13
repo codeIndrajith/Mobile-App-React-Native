@@ -8,6 +8,9 @@ const SignIn = () => {
             <Link href="/(auth)/sign-up">
                 <Text>Create Account</Text>
             </Link>
+            <Link href="/" >
+                <Text>Go to Home</Text>
+            </Link>
         </View>
     )
 }
